@@ -27,7 +27,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     // ENV.apiHost = 'http://localhost:4200';
     // ENV.apiHost = 'https://mysterious-harbor-73030.herokuapp.com';
-    ENV.apiHost = 'https://localhost:3000';
+    ENV.apiHost = 'http://localhost:3000';
   }
 
   if (environment === 'test') {

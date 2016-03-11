@@ -4,25 +4,25 @@ module.exports = function(app) {
   var storiesRouter = express.Router();
 
   var stories = [{
-      id: 1,
-      ownerId: 2,
+      id: '1',
+      ownerId: '2',
       title: 'Something',
       startDate: '2016-03-02',
       summary: 'summary',
-      editLock: 0,
+      editLock: '0',
       genreId: '3',
       checkoutTime: '2016-03-02',
-      stateId: 1
+      stateId: '1'
     }, {
-      id: 2,
-      ownerId: 1,
+      id: '2',
+      ownerId: '1',
       title: 'Something else',
       startDate: '2016-01-02',
       summary: 'another summary',
-      editLock: 1,
+      editLock: '1',
       genreId: '2',
       checkoutTime: '2016-03-04',
-      stateId: 1
+      stateId: '1'
     }
   ];
 

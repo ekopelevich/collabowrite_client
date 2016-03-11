@@ -1,11 +1,10 @@
 <div class="container full-page-container">
   <h1>Recent Stories</h1>
-  {{stories}}
-
-  <!-- <ul>
-    {{#each stories}}
-    <li>list item {{this}}</li>
+  {{log model}}
+  <ul>
+    {{#each model as |story| }}
+    <li>{{story.title}}</li>
     {{/each}}
-  </ul> -->
+  </ul>
   {{outlet}}
 </div>
