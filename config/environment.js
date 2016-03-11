@@ -43,7 +43,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = 'https://mysterious-harbor-73030.herokuapp.com';
   }
 
   return ENV;
