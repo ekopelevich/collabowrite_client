@@ -1,0 +1,281 @@
+@import "bootstrap";
+@import "variables";
+@import "mixins";
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica,Arial,sans-serif;
+  color: #353736;
+  background: url(../img/linedpaper.png) repeat;
+  background-color: #fbfaed;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 20px 0 35px;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+  @media(min-width:768px) {
+    margin: 0 0 35px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+
+a {
+  color: $primary;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  &:hover,
+  &:focus {
+      text-decoration: none;
+      color: darken($primary,20%);
+  }
+}
+
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(white, 0.3);
+  font-family: Helvetica,Arial,sans-serif;
+  background-color: #2e2e2e;
+  .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: white;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+  }
+  .navbar-brand {
+    font-weight: 700;
+    &:focus {
+        outline: none;
+    }
+  }
+  a {
+    color: white;
+  }
+  .nav {
+    li {
+      font-size: 1.5em;
+      a {
+        -webkit-transition: background .3s ease-in-out;
+        -moz-transition: background .3s ease-in-out;
+        transition: background .3s ease-in-out;
+        &:hover {
+          color: rgba(white, 0.8);
+          outline: none;
+          background-color: transparent;
+        }
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: transparent;
+        }
+      }
+      &.active {
+        outline: none;
+        a {
+          background-color: rgba(white, 0.3);
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro {
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+  .btn-hero {
+    padding: 20px 40px;
+    color: #fff;
+    background-color: #62e000;
+    font-size: 2em;
+  }
+  .btn-hero:hover {
+    background-color: #377d00;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-section {
+  padding-top: 100px;
+}
+
+@media(min-width:767px) {
+  .content-section {
+    padding: 250px 0;
+
+    h2 {
+      margin: 0 auto;
+    }
+
+    ul {
+      font-size: 1.5em;
+      line-height: 1.8em;
+    }
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 60%;
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:30%;
+    height: auto;
+    margin: 0 30px;
+  }
+
+  img {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 20px;
+  }
+
+  p {
+    text-align: center;
+    font-size: .8em;
+  }
+}
+
+.full-page-container {
+  padding-top: 100px;
+}
+
+@media(min-width:767px) {
+  .full-page-container {
+    padding-top: 150px 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  from {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+ul.banner-social-buttons {
+  margin-top: 0;
+  @media(max-width:1199px) {
+    margin-top: 15px;
+  }
+  @media(max-width:767px) {
+    li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(white, 0.2);
+}
+
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(white, 0.2);
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(white, 0.2);
+}
