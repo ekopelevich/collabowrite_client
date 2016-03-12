@@ -6,8 +6,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('dashboard');
+  this.route('dashboard', function(){
+    
+  });
   this.route('stories');
+  this.route('myStories');
+  this.route('myContributions');
+  this.route('myPending');
+  this.route('myStarred');
 });
 
 export default Router;
