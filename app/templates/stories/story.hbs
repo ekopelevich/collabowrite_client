@@ -1,0 +1,9 @@
+{{#each model as | story | }}
+<div class="story-container well">
+<h3 class="story-title">{{story.title}}</h3>
+<p class="story-summary">{{story.summary}}</p>
+</div>
+{{/each}}
+
+{{model}}
+{{outlet}}

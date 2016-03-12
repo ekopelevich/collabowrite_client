@@ -1,18 +1,24 @@
 <div class="container full-page-container">
   <h1>Recent Stories</h1>
   {{log model}}
-  <ul class="story-list">
+  <div class="story-list">
     {{#each model as | story | }}
-
-
-
-    <li>
       <div class="story-container well">
-      <h3 class="story-title">{{story.title}}</h3>
-      <p class="story-summary">{{story.summary}}</p>
+        <div class="story-info-container">
+          {{#link-to "stories.story" story }}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
+          <p class="story-summary">{{story.summary}}</p>
+        </div>
+        <div class="btn-container">
+          {{#link-to "stories.story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
+          {{#if user}}
+          {{#link-to "stories.story" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
+          <!-- {{else}}
+          <button type="button" class="btn btn-primary">Login or Register</button> -->
+          {{/if}}
+        </div>
       </div>
-    </li>
     {{/each}}
-  </ul>
-  {{outlet}}
+  </div>
 </div>
+
+{{outlet}}
