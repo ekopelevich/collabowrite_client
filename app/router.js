@@ -15,6 +15,8 @@ Router.map(function() {
   this.route('stories', function(){
     this.route('story', {path: '/:story_id'});
   });
+  this.route('login');
+  this.route('logout');
 });
 
 export default Router;

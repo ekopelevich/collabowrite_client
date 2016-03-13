@@ -1,0 +1,22 @@
+<div class="container full-page-container">
+
+  <h1>Login</h1>
+
+  <form action="authenticate" on="submit">
+
+    <label for="username">Username</label>
+    {{input value=username placeholder='username' class='form-control'}}
+
+    <label for="password">Password</label>
+    {{input value=password placeholder='password' class='form-control' type='password'}}
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+  {{#if errorMessage}}
+    <p>Login failed</p>
+    <code>{{errorMessage}}</code>
+  {{/if}}
+
+</div>
