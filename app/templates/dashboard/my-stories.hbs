@@ -1,0 +1,25 @@
+<div class="container full-page-container">
+  <article class="my-stories">
+    <h1>My Stories</h1>
+    <div class="story-list">
+      {{#each model as | story | }}
+        <div class="story-container well">
+          <div class="story-info-container">
+            {{#link-to "stories.story" story }}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
+            <p class="story-summary">{{story.summary}}</p>
+          </div>
+          <div class="btn-container">
+            {{#link-to "stories.story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
+            {{#if user}}
+            {{#link-to "stories.story" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
+            <!-- {{else}}
+            <button type="button" class="btn btn-primary">Login or Register</button> -->
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </article>
+</div>
+
+  {{outlet}}

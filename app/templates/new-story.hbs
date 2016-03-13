@@ -1,0 +1,25 @@
+<div class="container full-page-container">
+  <h1>Start a New Story</h1>
+  <p>Have you read the <a href="#guidelines" target="_blank">community guidelines</a>?</p>
+  <form class="" action="index.html" method="post">
+    <label for="title">Title</label>
+    {{input name='title' placeholder='Name your story' class='form-control'}}
+    <label for="summary">Summary</label>
+    {{input name='summary' placeholder='Just a sentence. Update this at any time.' class='form-control'}}
+    <label for="genre">Genre</label>
+    <select class="form-control" name="genre">
+      <option value="">Let's see what happens!</option>
+      <option value="">Children's</option>
+      <option value="">Comedy</option>
+      <option value="">Drama</option>
+      <option value="">Fantasy</option>
+      <option value="">Historical Fiction</option>
+      <option value="">Horror</option>
+      <option value="">Mystery</option>
+      <option value="">Romance</option>
+      <option value="">Satire</option>
+      <option value="">Tragedy</option>
+    </select>
+    <button type="submit" class="btn btn-success">Get Started!</button>
+  </form>
+</div>

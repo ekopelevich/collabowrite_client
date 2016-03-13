@@ -6,17 +6,21 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('logout');
   this.route('dashboard', function(){
-    this.route('myStories', {path: '/dashboard/myStories'});
-    this.route('myContributions', {path: '/dashboard/myContributions'});
-    this.route('myPending', {path: '/dashboard/myPending'});
-    this.route('myStarred', {path: '/dashboard/myStarred'});
+    this.route('myStories', {path: '/dashboard/my-stories'});
+    this.route('myContributions', {path: '/dashboard/my-contributions'});
+    this.route('myPending', {path: '/dashboard/my-pending'});
+    this.route('myStarred', {path: '/dashboard/my-starred'});
   });
   this.route('stories', function(){
     this.route('story', {path: '/:story_id'});
   });
-  this.route('login');
-  this.route('logout');
+  this.route('contributions', function(){
+    this.route('contribution', {path: '/:contribution_id'});
+  });
+  this.route('newStory');
 });
 
 export default Router;

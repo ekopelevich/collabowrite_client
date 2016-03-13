@@ -36,7 +36,7 @@ p {
 }
 
 a {
-  color: $primary;
+  color: $links;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -44,6 +44,28 @@ a {
   &:focus {
       text-decoration: none;
       color: darken($primary,20%);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  input, button {
+    margin: 5px 0 15px;
+  }
+
+  button {
+    max-width: 150px;
+    margin-top: 30px;
+    align-self: flex-end;
+  }
+}
+
+@media(min-width:767px) {
+  form {
+    width: 50%;
   }
 }
 
@@ -261,22 +283,11 @@ body {
 
 // View Specific Styles
 
-//login view
-
-form {
-  display: flex;
-  flex-direction: column;
-
-  input, button {
-    margin: 5px 0 15px;
-  }
-}
-
-//stories view
+// Stories view
 
 .story-container {
   display: flex;
-  background-color: rgba(150, 184, 212, 0.3);
+  background-color: rgba(150, 184, 212, 0.2);
 
   .story-info-container {
     display: flex;
@@ -308,4 +319,48 @@ form {
       margin: 5px;
     }
   }
+}
+
+// Dashboard View
+
+.nav-tabs-custom {
+  max-width: 600px;
+  align-self: flex-start;
+
+  li {
+    margin: 0 20px 10px 10px;
+  }
+}
+
+.dash-sections {
+  width: 90vw;
+  height:60vh;
+  margin-bottom: 20px;
+
+
+  .my-profile {
+    background-color: #e9e29b;
+  }
+
+  .my-stories {
+    background-color: #4f97bf;
+  }
+
+  .my-contributions {
+    background-color: #eb83ea;
+  }
+
+  .my-pending {
+    background-color: #7bee63;
+  }
+
+  .my-starred {
+    background-color: #bf56e9;
+  }
+}
+
+// Contributions Styles
+
+.contribution-list {
+  width: 80%;
 }

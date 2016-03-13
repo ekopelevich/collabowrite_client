@@ -1,5 +1,16 @@
 <div class="container full-page-container">
   <h1>Dashboard</h1>
-  <!-- {{partial 'dashboard/dashnav'}} -->
+  <ul class="nav nav-tabs nav-tabs-custom">
+    <li class="my-profile">My Profile</li>
+    <li class="my-stories">My Stories</li>
+    <!-- {{#link-to "myStories" tagName="li" class="active"}}My Stories{{/link-to}} -->
+    <li class="my-contributions">My Contributions</li>
+    <li class="my-pending">Pending Approval</li>
+    <li class="my-starred">Starred</li>
+  </ul>
+  <div class="dash-sections">
+
+  </div>
+
   {{outlet}}
 </div>

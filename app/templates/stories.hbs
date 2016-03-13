@@ -7,6 +7,9 @@
         <div class="story-info-container">
           {{#link-to "stories.story" story }}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
+          <p class="story-meta-data">Started by: {{story.ownerId}}
+            <span class="story-genre">Genre: {{story.genreId}}</span>
+          </p>
         </div>
         <div class="btn-container">
           {{#link-to "stories.story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
