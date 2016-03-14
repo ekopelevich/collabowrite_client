@@ -15,16 +15,18 @@ Router.map(function() {
     this.route('pending');
     this.route('starred');
   });
-  this.route('new-stories', {path: 'stories/new'});
-  this.route('edit', {path: 'stories/edit'} );
-  this.route('stories');
-  this.route('story', {path: 'stories/:story_id'});
-
-  this.route('contributions', function(){
+  this.route('stories', function(){
+    // this.route('index');
     this.route('new');
     this.route('edit');
-    this.route('contribution', {path: 'contributions/:contribution_id'});
   });
+  this.route('story', {path: 'stories/:story_id'});
+  this.route('contributions', function(){
+    this.route('index')
+    this.route('new');
+    this.route('edit');
+  });
+  this.route('contribution', {path: 'contributions/:contribution_id'});
 });
 
 export default Router;

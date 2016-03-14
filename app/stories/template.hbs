@@ -1,4 +1,6 @@
 <div class="container full-page-container">
+  {{outlet}}
+  {{new-story-btn}}
   <h1>Recent Stories</h1>
   <div class="story-list">
     {{#each model as |story| }}
@@ -21,5 +23,4 @@
       </div>
     {{/each}}
   </div>
-  {{outlet}}
 </div>
