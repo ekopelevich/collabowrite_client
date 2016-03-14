@@ -1,5 +1,10 @@
 <div class="container full-page-container">
-  <h2>Hello {{model.username}}</h2>
+  {{new-story-btn}}
+  <div class="dash-header">
+    <h3>Hello {{model.username}}</h3>
+
+  </div>
+
   <div class="dash-folders">
     <ul class="nav nav-tabs nav-tabs-custom">
       {{#link-to "dashboard.profile" tagName="li" class="my-profile"}}My Profile{{/link-to}}
@@ -11,7 +16,7 @@
     <div class="dash-sections">
       <article class="inner-section">
         {{outlet}}
-      </article>  
+      </article>
     </div>
   </div>
 

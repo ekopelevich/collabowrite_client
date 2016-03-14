@@ -284,6 +284,16 @@ body {
 
 // Dashboard View
 
+.btn-new-story {
+
+}
+
+.dash-header {
+  margin: 20px;
+  max-width: 800px;
+  width: 80%;
+}
+
 .dash-folders {
 
   .nav-tabs-custom {
@@ -346,7 +356,7 @@ body {
   }
 }
 
-// Stories & Contributions Views
+// Stories, Story and Contributions Views
 
 .story-container, .contribution-container {
   display: flex;
@@ -404,4 +414,12 @@ body {
       margin: 5px;
     }
   }
+}
+
+.story-container-individual {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(150, 184, 212, 0.2);
+  max-width: 90vw;
+  width: 800px;
 }

@@ -1,8 +1,7 @@
 <div class="container full-page-container">
   <h1>Recent Stories</h1>
-  {{log model}}
   <div class="story-list">
-    {{#each model as | story | }}
+    {{#each model as |story| }}
       <div class="story-container well">
         <div class="story-info-container">
           {{#link-to "story" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
@@ -22,6 +21,5 @@
       </div>
     {{/each}}
   </div>
+  {{outlet}}
 </div>
-
-{{outlet}}

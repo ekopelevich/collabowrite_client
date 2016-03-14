@@ -1,7 +1,7 @@
 <div class="container full-page-container">
   <h1>Start a New Story</h1>
   <p>Have you read the <a href="#guidelines" target="_blank">community guidelines</a>?</p>
-  <form class="" action="index.html" method="post">
+  <form {{action="createStory" model on="submit"}}>
     <label for="title">Title</label>
     {{input name='title' placeholder='Name your story' class='form-control'}}
     <label for="summary">Summary</label>
