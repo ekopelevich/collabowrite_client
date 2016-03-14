@@ -137,7 +137,7 @@ form {
   .btn-hero {
     padding: 20px 40px;
     color: #fff;
-    background-color: #FF9933;
+    background-color: $main-orange;
     font-size: 2em;
     margin-top: 30px;
   }
@@ -284,39 +284,65 @@ body {
 
 // Dashboard View
 
-.nav-tabs-custom {
-  max-width: 600px;
-  align-self: flex-start;
+.dash-folders {
 
-  li {
-    margin: 0 20px 10px 10px;
+  .nav-tabs-custom {
+    max-width: 800px;
+
+    li {
+      display: block;
+      padding: 10px;
+      margin-right: 2px;
+      color: #fff;
+      background-color: #91bb08;
+      border-radius: 5px 5px 0 0;
+      font-family: 'Satisfy', cursive;
+    }
+
+    li:active {
+
+    }
+
+    .my-profile {
+      background-color: $manila;
+    }
+
+    .my-stories {
+      background-color: $blue;
+    }
+
+    .my-contributions {
+      background-color: $pink;
+    }
+
+    .my-pending {
+      background-color: $green;
+    }
+
+    .my-starred {
+      background-color: $purple;
+    }
   }
-}
 
-.dash-sections {
-  width: 90vw;
-  height:60vh;
-  margin-bottom: 20px;
+  .dash-sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 800px;
+    height:60vh;
+    margin-bottom: 20px;
+    border-radius: 0 5px 0 0;
+    background-color: $manila;
+    // background: url(../img/ricepaper2.png) repeat;
+    box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
 
-
-  .my-profile {
-    background-color: #e9e29b;
-  }
-
-  .my-stories {
-    background-color: #4f97bf;
-  }
-
-  .my-contributions {
-    background-color: #eb83ea;
-  }
-
-  .my-pending {
-    background-color: #7bee63;
-  }
-
-  .my-starred {
-    background-color: #bf56e9;
+    .inner-section {
+      width: 95%;
+      height: 90%;
+      background-color: rgba(231, 255, 253, 0.8);
+      border-radius: 5px;
+    }
   }
 }
 

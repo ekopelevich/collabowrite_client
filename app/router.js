@@ -9,18 +9,25 @@ Router.map(function() {
   this.route('login');
   this.route('logout');
   this.route('dashboard', function(){
-    this.route('myStories', {path: '/dashboard/my-stories'});
-    this.route('myContributions', {path: '/dashboard/my-contributions'});
-    this.route('myPending', {path: '/dashboard/my-pending'});
-    this.route('myStarred', {path: '/dashboard/my-starred'});
+    this.route('profile', {path: '/profile'});
+    this.route('stories', {path: '/stories'});
+    this.route('contributions', {path: '/contributions'});
+    this.route('pending', {path: '/pending'});
+    this.route('starred', {path: '/starred'});
   });
   this.route('stories', function(){
-    this.route('story', {path: '/:story_id'});
+    this.route('new');
+    this.route('edit');
   });
+  this.route('story', {path: 'stories/:id'});
+
   this.route('contributions', function(){
-    this.route('contribution', {path: '/:contribution_id'});
+    this.route('new');
+    this.route('edit');
+    this.route('contribution', {path: '/contributions/:id'});
   });
-  this.route('newStory');
+
+
 });
 
 export default Router;

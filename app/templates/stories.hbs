@@ -5,16 +5,16 @@
     {{#each model as | story | }}
       <div class="story-container well">
         <div class="story-info-container">
-          {{#link-to "stories.story" story }}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
+          {{#link-to "story" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
           <p class="story-meta-data">Started by: {{story.ownerId}}
             <span class="story-genre">Genre: {{story.genreId}}</span>
           </p>
         </div>
         <div class="btn-container">
-          {{#link-to "stories.story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
+          {{#link-to "story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
           {{#if user}}
-          {{#link-to "stories.story" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
+          {{#link-to "story" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
           <!-- {{else}}
           <button type="button" class="btn btn-primary">Login or Register</button> -->
           {{/if}}

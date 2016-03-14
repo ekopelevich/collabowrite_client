@@ -2,10 +2,10 @@
   <h1>Recent Contributions</h1>
   {{log model}}
   <div class="contribution-list">
-    {{#each model as | contribution | }}
+    {{#each model as |contribution| }}
       <div class="contribution-container well">
         <div class="contributions-info-container">
-          {{#link-to "contributions.contribution" contributions }}<h3 class="contributions-title">{{contribution.title}}</h3>{{/link-to}}
+          {{#link-to "contribution" contributions }}<h3 class="contributions-title">{{contribution.title}}</h3>{{/link-to}}
           <p class="contribution-summary">
             Author:
             {{#link-to "contribution.authorId" contributions }}
