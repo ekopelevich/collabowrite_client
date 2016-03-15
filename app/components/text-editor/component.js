@@ -17,8 +17,9 @@ export default Ember.Component.extend({
 
   didInsertElement: function() {
     var component = this;
+    var options = this.get('_options');
 
-    var options = _.assign(this.get('_options'), {
+    Ember.merge(options, {
       setup: function(editor) {
         // bind change event
         editor.on('change', function() {
