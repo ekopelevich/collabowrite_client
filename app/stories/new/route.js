@@ -1,20 +1,25 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // actions: {
-  //   createStory(story){
-  //     console.log(story);
-  //     var newStory = this.store.createRecord('story'); //optional obj as second parameter
-  //     newStory.set('title', story.title);
-  //     newStory.set('summary', story.summary);
-  //     this.get('store').saveStory(story);
-  //     this.transitionTo('stories.story', story);
-  //   },
-  //   saveStory(story){
-  //     console.log(story);
-  //   }
-  // },
-  // model(){
-  //   return story;
-  // }
+  actions: {
+    createStory(){
+      var newStory = store.createRecord('story', {
+        ownerId: newStory.ownerId,
+        title: newStory.title,
+        summary: newStory.summary,
+        editLock: 0,
+        genreId: newStory.ownerId,
+        stateId: 1
+      });
+      console.log(newStory);
+      this.get('store').saveStory(newStory);
+      this.transitionTo('stories.story', newStory);
+    },
+    saveStory(newStory){
+      newStory.save();
+    }
+  },
+  model(){
+    return newStory;
+  }
 });

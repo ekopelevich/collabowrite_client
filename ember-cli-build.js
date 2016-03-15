@@ -1,11 +1,31 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var pickFiles = require('broccoli-static-compiler');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+
+  // import the main file
+  app.import('bower_components/tinymce/tinymce.min.js', {destDir: 'assets/tinymce'});
+
+  // import the jquery integration file
+  app.import('bower_components/tinymce/jquery.tinymce.min.js', {destDir: 'assets/tinymce'});
+
+  // import all the assets (technically you could be more precise in picking just the plugins and themes that you require, but for brevity's sake this will work)
+  var tinymceAssets = pickFiles('bower_components/tinymce/', {
+    srcDir: '/',
+    files: ['**/*.min.js', '**/*.min.css', '**/*.woff', '**/*.ttf'],
+    destDir: '/tinymce'
+  });
+
+  app.import('vendor/lodash.min.js', {
+  'lodash': [
+    'default'
+  ]
+});
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -20,5 +40,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  return app.toTree([tinymceAssets]);
 };

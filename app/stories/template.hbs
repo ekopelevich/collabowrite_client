@@ -1,11 +1,13 @@
 <div class="container full-page-container">
   {{outlet}}
-  {{new-story-btn}}
   <h1>Recent Stories</h1>
   <div class="story-list">
     {{#each model as |story| }}
       <div class="story-container">
         <div class="story-info-container">
+          <p>
+            {{story.thing}}
+          </p>
           {{#link-to "story" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
           <p class="story-meta-data">Started by: {{story.ownerId}}
@@ -16,8 +18,6 @@
           {{#link-to "story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
           {{#if user}}
           {{#link-to "story" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
-          <!-- {{else}}
-          <button type="button" class="btn btn-primary">Login or Register</button> -->
           {{/if}}
         </div>
       </div>
