@@ -345,9 +345,13 @@ body {
 
 .story-container, .contribution-container {
   display: flex;
-  background-color: rgba(150, 184, 212, 0.2);
   max-width: 90vw;
   width: 800px;
+  background-color: rgba(150, 184, 212, 0.2);
+  border: 5px #fff;
+  box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
+  margin-bottom: 30px;
+  padding: 20px;
 
   .story-info-container, .contribution-info-container {
     display: flex;
@@ -404,7 +408,11 @@ body {
 .story-container-individual {
   display: flex;
   flex-direction: column;
-  background-color: rgba(150, 184, 212, 0.2);
   max-width: 90vw;
   width: 800px;
+  background-color: rgba(150, 184, 212, 0.2);
+  border: 5px #fff;
+  box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
+  margin-bottom: 30px;
+  padding: 20px;
 }
