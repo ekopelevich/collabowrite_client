@@ -304,33 +304,14 @@ body {
       padding: 10px;
       margin-right: 2px;
       color: #fff;
-      background-color: #91bb08;
+      background-color: $main-orange;
+      border: 1px #000;
       border-radius: 5px 5px 0 0;
       font-family: 'Satisfy', cursive;
     }
 
-    li:active {
-
-    }
-
-    .my-profile {
-      background-color: $manila;
-    }
-
-    .my-stories {
-      background-color: $blue;
-    }
-
-    .my-contributions {
-      background-color: $pink;
-    }
-
-    .my-pending {
-      background-color: $green;
-    }
-
-    .my-starred {
-      background-color: $purple;
+    li:active, li:hover {
+      background-color: $main-blue;
     }
   }
 
@@ -352,6 +333,10 @@ body {
       height: 90%;
       background-color: rgba(231, 255, 253, 0.8);
       border-radius: 5px;
+
+      button {
+        align-self: flex-end;
+      }
     }
   }
 }

@@ -16,13 +16,11 @@ Router.map(function() {
     this.route('starred');
   });
   this.route('stories', function(){
-    // this.route('index');
     this.route('new');
     this.route('edit');
   });
   this.route('story', {path: 'stories/:story_id'});
   this.route('contributions', function(){
-    this.route('index')
     this.route('new');
     this.route('edit');
   });
