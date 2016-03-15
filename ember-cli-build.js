@@ -18,8 +18,7 @@ module.exports = function(defaults) {
     srcDir: '/',
     files: ['**/*.min.js', '**/*.min.css', '**/*.woff', '**/*.ttf'],
     destDir: '/tinymce'
-  });
-});
+    });
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
