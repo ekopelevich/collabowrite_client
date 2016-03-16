@@ -4,14 +4,14 @@ export default Ember.Component.extend({
   classNames: ['text-editor'],
 
   _options: {
-    skin_url: '../tinymce/skins/lightgray',
-    theme_url: '../tinymce/themes/modern/theme.min.js',
+    skin_url: '/tinymce/skins/lightgray',
+    theme_url: '/tinymce/themes/modern/theme.min.js',
     external_plugins: {
-      image: '../tinymce/plugins/image/plugin.min.js',
-      link: '../tinymce/plugins/link/plugin.min.js',
-      table: '../tinymce/plugins/table/plugin.min.js'
+      image: '/tinymce/plugins/image/plugin.min.js',
+      link: '/tinymce/plugins/link/plugin.min.js',
+      table: '/tinymce/plugins/table/plugin.min.js'
     },
-    menubar: false,
+    menubar: true,
     toolbar1: 'bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link table image'
   },
 
