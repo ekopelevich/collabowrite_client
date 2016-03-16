@@ -3,11 +3,11 @@
   <p>Have you read the <a href="#guidelines" target="_blank">community guidelines</a>?</p>
   <form {{action "createStory" model on="submit"}}>
     <label for="title">Title</label>
-    {{input name='title' placeholder='Name your story' class='form-control'}}
+    {{input value=model.title placeholder='Name your story' class='form-control'}}
     <label for="summary">Summary</label>
-    {{input name='summary' placeholder='Just a sentence. Update this at any time.' class='form-control'}}
+    {{input value=model.summary placeholder='Just a sentence. Update this at any time.' class='form-control'}}
     <label for="genre">Genre</label>
-    <select class="form-control" name="genre">
+    <select class="form-control" value={{model.genreId}}>
       <option value="1">Let's see what happens!</option>
       <option value="2">Children's</option>
       <option value="3">Comedy</option>
