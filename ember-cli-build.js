@@ -16,8 +16,7 @@ module.exports = function(defaults) {
 
   var tinymceAssets = pickFiles('bower_components/tinymce/', {
     srcDir: '/',
-    files: ['*/*'],
-    // files: ['**/*.min.js', '**/*.min.css', '**/*.woff', '**/*.ttf'],
+    files: ['**/*.min.js', '**/*.min.css', '**/*.woff', '**/*.ttf'],
     destDir: '/tinymce'
     });
 

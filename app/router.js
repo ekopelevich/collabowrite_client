@@ -25,7 +25,6 @@ Router.map(function() {
     this.route('edit');
   });
   this.route('contribution', {path: 'contributions/:contribution_id'});
-  this.route('contribution.new');
 });
 
 export default Router;

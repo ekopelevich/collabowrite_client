@@ -8,5 +8,7 @@ export default DS.Model.extend({
   editLock: DS.attr(),
   genreId: DS.attr(),
   checkoutTime: DS.attr(),
-  stateId: DS.attr()
+  stateId: DS.attr(),
+  owner: DS.belongsTo('user', {async: true}),
+  contributions: DS.hasMany('contributions', {async: true})
 });

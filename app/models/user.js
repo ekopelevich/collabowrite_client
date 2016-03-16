@@ -10,5 +10,7 @@ export default DS.Model.extend({
   bio: DS.attr(),
   memberSince: DS.attr(),
   avatar: DS.attr(),
-  banned: DS.attr()
+  banned: DS.attr(),
+  stories: DS.hasMany('story', {async: true}),
+  contributions: DS.hasMany('contribution', {async: true})
 });
