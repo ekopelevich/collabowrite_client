@@ -7,11 +7,11 @@
         <div class="story-info-container">
           {{#link-to "story" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
-          <p class="story-meta-data">
+          <div class="story-meta-data">
             <p class="story-user">Created by: {{story.ownerId}}</p>
             <p class="story-genre">Genre: {{story.genreId}}</p>
             <p class="story-start-date">Created on: {{moment-format story.startDate}}</p>
-          </p>
+          </div>
           {{#each model.contributions as |contribution| }}
             <p>{{contribution.body}}</p>
           {{/each}}

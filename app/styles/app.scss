@@ -364,9 +364,9 @@ body {
 
     .story-meta-data {
       .story-user, .story-genre, .story-start-date {
-        font-size: .6em;
+        font-size: 1em;
         color: #4d0091;
-        line-height: .5em;
+        line-height: .6em;
         margin-top: -20px;
       }
     }
@@ -401,17 +401,6 @@ body {
       margin: 5px;
     }
   }
-}
-
-.story-container-individual {
-  display: flex;
-  flex-direction: column;
-  max-width: 90vw;
-  width: 800px;
-  background: url(../img/paper.png) repeat;
-  border: 5px solid #fff;
-  margin-bottom: 30px;
-  padding: 20px;
 }
 
 .story-container:before {

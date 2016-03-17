@@ -1,10 +1,17 @@
 <div class="container full-page-container">
   {{log model}}
-  <div class="story-container-individual">
-    <h3 class="story-title">{{model.title}}</h3>
-    <p class="story-info">By: {{model.author}}<span>Genre: {{model.genre}}</span></p>
-    <p class="story-summary">{{model.summary}}</p>
+  <div class="story-container">
+    <div class="story-info-container">
+      <h3 class="story-title">{{model.story.title}}</h3>
+      <div class="story-meta-data">
+        <p class="story-user">Created by: {{model.story.ownerId}}</p>
+        <p class="story-genre">Genre: {{model.story.genreId}}</p>
+        <p class="story-start-date">Created on: {{moment-format model.story.startDate}}</p>
+      </div>
+      {{#each model.contributions as |contribution| }}
+        <p>{{contribution.body}}</p>
+      {{/each}}
+    </div>
     {{new-contribution-btn}}
-    <!-- {{outlet}} -->
   </div>
 </div>
