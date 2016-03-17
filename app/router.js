@@ -21,7 +21,7 @@ Router.map(function() {
   });
   this.route('story', {path: 'stories/:story_id'}, function(){
     this.route('contributions', {path: 'contributions'}, function(){
-      this.route('new'), {path: 'new'}; //new contribution
+      this.route('new', {path: 'new'}); //new contribution
       this.route('edit'); //edit contribution
     }); //contributions for story
     this.route('view', {path: 'stories/:story_id/contributions/:contribution_id'}); //view contribution

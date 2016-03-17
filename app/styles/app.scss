@@ -362,6 +362,12 @@ body {
     flex-grow: 30;
     margin-right: 10px;
 
+    .story-title {
+      text-align: left;
+      font-size: 2em;
+      margin-bottom: 50px;
+    }
+
     .story-meta-data {
       .story-user, .story-genre, .story-start-date {
         font-size: 1em;
@@ -372,11 +378,19 @@ body {
     }
 
     .story-summary {
+      font-style: italic;
+      color: #140780;
+    }
+
+    .contribution-title {
+      text-align: left;
+      font-size: 1.5em;
+      color: #0095c4;
     }
 
     .contribution-author {
       color: #4e4e4e;
-      font-size: 0.8em;
+      font-size: 1em;
     }
 
     .contribution-date {

@@ -1,6 +1,11 @@
 {{yield}}
 {{log data}}
+
 {{#each data as |contribution|}}
-  <h2>{{contribution.title}}</h2>
-  <p>{{contribution.body}}</p>
+  <div class="contribution-info-container">
+    <h2 class="contribution-title">{{contribution.title}}</h2>
+    <p class="contribution-author">{{contribution.authorId}}</p>
+    <p class="contribution-body">{{contribution.body}}</p>
+    <p class="contribution-date">{{contribution.date}}</p>
+  </div>
 {{/each}}
