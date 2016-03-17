@@ -12,9 +12,6 @@
             <p class="story-genre">Genre: {{story.genreId}}</p>
             <p class="story-start-date">Created on: {{moment-format story.startDate}}</p>
           </div>
-          {{#each model.contributions as |contribution| }}
-            <p>{{contribution.body}}</p>
-          {{/each}}
         </div>
         <div class="btn-container">
           {{#link-to "story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}

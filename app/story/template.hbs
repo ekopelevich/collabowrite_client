@@ -8,10 +8,10 @@
         <p class="story-genre">Genre: {{model.story.genreId}}</p>
         <p class="story-start-date">Created on: {{moment-format model.story.startDate}}</p>
       </div>
-      {{#each model.contributions as |contribution| }}
-        <p>{{contribution.body}}</p>
-      {{/each}}
+      {{outlet}}
+      
     </div>
     {{new-contribution-btn}}
+
   </div>
 </div>
