@@ -329,7 +329,6 @@ body {
     margin-bottom: 20px;
     border-radius: 0 5px 0 0;
     background-color: $manila;
-    // background: url(../img/ricepaper2.png) repeat;
     box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
 
     .inner-section {
@@ -352,7 +351,7 @@ body {
   display: flex;
   max-width: 90vw;
   width: 800px;
-  background-color: #ffc;
+  background: url(../img/paper.png) repeat;
   border: 5px solid #fff;
   margin-bottom: 30px;
   padding: 20px;
@@ -417,13 +416,13 @@ body {
   flex-direction: column;
   max-width: 90vw;
   width: 800px;
-  background-color: #ccc;
+  background: url(../img/paper.png) repeat;
   border: 5px solid #fff;
   margin-bottom: 30px;
   padding: 20px;
 }
 
-.story-container:before, .story-container-individual:before {
+.story-container:before {
   content: "";
   position:absolute;
   z-index: -1;
@@ -434,7 +433,7 @@ body {
   border-radius: 100px / 5px;
   box-shadow:0 0 25px rgba(0,0,0,0.6);
 }
-.story-container:after, .story-container-individual:after {
+.story-container:after {
   content: "";
   position:absolute;
   z-index: -1;

@@ -19,12 +19,14 @@ Router.map(function() {
     this.route('new');
     this.route('edit');
   });
-  this.route('story', {path: 'stories/:story_id'});
-  this.route('contributions', function(){
-    this.route('new');
-    this.route('edit');
+  this.route('story', {path: 'stories/:story_id'}, function(){
+    this.route('contributions', {path: 'stories/:story_id/contributions'}) //contrib. for story
+    this.route('view', {path: 'stories/:story_id/contributions/:contribution_id'}); //view contribution
+    this.route('edit'); //edit contribution
+    this.route('new'); //new contribution
   });
-  this.route('contribution', {path: 'contributions/:contribution_id'});
+  this.route('users');
+  this.route('contribution');
 });
 
 export default Router;
