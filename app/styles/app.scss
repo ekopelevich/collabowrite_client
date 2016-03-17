@@ -362,24 +362,16 @@ body {
     flex-grow: 30;
     margin-right: 10px;
 
-    .story-title, .contribution-title {
-      color: rgba(3, 88, 120, 0.8);
-      text-align: left;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .story-genre {
-      color: rgba(3, 88, 120, 0.8);
-      text-align: left;
-      font-weight: 400;
-      margin: 0;
+    .story-meta-data {
+      .story-user, .story-genre, .story-start-date {
+        font-size: .6em;
+        color: #4d0091;
+        line-height: .5em;
+        margin-top: -20px;
+      }
     }
 
     .story-summary {
-      color: #4e4e4e;
-      font-style: italic;
-      font-size: 1.1em;
     }
 
     .contribution-author {

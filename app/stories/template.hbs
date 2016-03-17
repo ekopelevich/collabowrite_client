@@ -8,9 +8,9 @@
           {{#link-to "story" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
           <p class="story-meta-data">
-            <span class="story-user">Created by: {{story.userId}}</span>
-            <span class="story-genre">Genre: {{story.genreId}}</span>
-            <span class="story-start-date">Created on: {{story.startDate}}</span>
+            <p class="story-user">Created by: {{story.ownerId}}</p>
+            <p class="story-genre">Genre: {{story.genreId}}</p>
+            <p class="story-start-date">Created on: {{moment-format story.startDate}}</p>
           </p>
           {{#each model.contributions as |contribution| }}
             <p>{{contribution.body}}</p>

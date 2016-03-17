@@ -1,0 +1,8 @@
+{{yield}}
+
+{{#each model as |contribution|}}
+  <div class="contribution-container">
+    <h2>{{contribution.title}}</h2>
+    <p>{{contribution.body}}</p>
+  </div>
+{{/each}}

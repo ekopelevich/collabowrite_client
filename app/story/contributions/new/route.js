@@ -8,6 +8,6 @@ export default Ember.Route.extend({
       contributions: this.store.findAll('contribution')
     }).then(function(data){
       return data;
-    })
+    });
   }
 });
