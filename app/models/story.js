@@ -9,6 +9,6 @@ export default DS.Model.extend({
   genreId: DS.attr(),
   checkoutTime: DS.attr(),
   stateId: DS.attr(),
-  owner: DS.belongsTo('user', {async: true}),
-  contributions: DS.hasMany('contributions', {async: true})
+  // owner: DS.belongsTo('user'),
+  contributions: DS.hasMany('contribution')
 });

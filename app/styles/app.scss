@@ -347,37 +347,12 @@ body {
 
 // Stories, Story and Contributions Views
 
-.story-container {
-  position:relative;
-}
-.story-container:before, .story-container-individual:before {
-  content: "";
-  position:absolute;
-  z-index: -1;
-  width:96%;
-  top: 0;
-  height: 10px;
-  left: 2%;
-  border-radius: 100px / 5px;
-  box-shadow:0 0 25px rgba(0,0,0,0.6);
-}
-.story-container:after, .story-container-individual:after {
-  content: "";
-  position:absolute;
-  z-index: -1;
-  width:96%;
-  bottom: 0;
-  height: 10px;
-  left: 2%;
-  border-radius: 100px / 5px;
-  box-shadow:0 0 25px rgba(0,0,0,0.6);
-}
-
 .story-container, .contribution-container {
+  position:relative;
   display: flex;
   max-width: 90vw;
   width: 800px;
-  background-color: #fafafa;
+  background-color: #ffc;
   border: 5px solid #fff;
   margin-bottom: 30px;
   padding: 20px;
@@ -446,4 +421,27 @@ body {
   border: 5px solid #fff;
   margin-bottom: 30px;
   padding: 20px;
+}
+
+.story-container:before, .story-container-individual:before {
+  content: "";
+  position:absolute;
+  z-index: -1;
+  width:96%;
+  top: 0;
+  height: 10px;
+  left: 2%;
+  border-radius: 100px / 5px;
+  box-shadow:0 0 25px rgba(0,0,0,0.6);
+}
+.story-container:after, .story-container-individual:after {
+  content: "";
+  position:absolute;
+  z-index: -1;
+  width:96%;
+  bottom: 0;
+  height: 10px;
+  left: 2%;
+  border-radius: 100px / 5px;
+  box-shadow:0 0 25px rgba(0,0,0,0.6);
 }

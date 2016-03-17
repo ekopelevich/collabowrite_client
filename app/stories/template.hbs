@@ -13,6 +13,11 @@
           <p class="story-meta-data">Started by: {{story.ownerId}}
             <span class="story-genre">Genre: {{story.genreId}}</span>
           </p>
+          {{#each model.contributions as |contribution| }}
+          <p>
+            {{contribution}}
+          </p>
+          {{/each}}
         </div>
         <div class="btn-container">
           {{#link-to "story" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
