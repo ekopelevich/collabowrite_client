@@ -5,13 +5,17 @@
       <h3 class="story-title">{{model.story.title}}</h3>
       <p class="story-summary">{{model.story.summary}}</p>
       <div class="story-meta-data">
-        <p class="story-user">Created by: {{model.story.userId}}</p>
+        <p class="story-user">Created by: {{model.story.user.firstName}} {{story.user.lastName}}</p>
         <p class="story-genre">Genre: {{model.story.genreId}}</p>
         <p class="story-start-date">Created on: {{moment-format model.story.startDate}}</p>
       </div>
+
       {{outlet}}
     </div>
-    {{new-contribution-btn}}
-
+    <div class="btn-container">
+      {{new-contribution-btn}}
+      {{delete-story-btn}}
+      {{edit-story-btn}}
+    </div>
   </div>
 </div>

@@ -141,7 +141,7 @@ form {
   .btn-hero {
     padding: 20px 40px;
     color: #fff;
-    background-color: #0065a6;
+    background-color: $main-blue;
     font-size: 2em;
     margin-top: 30px;
   }
@@ -389,21 +389,18 @@ body {
       text-align: left;
       font-size: 1.5em;
       color: #0095c4;
+      margin-bottom: 30px;
     }
 
-    .contribution-author {
-      color: #4e4e4e;
+    .contribution-author, .contribution-date {
       font-size: 1em;
-    }
-
-    .contribution-date {
-      color: #3b6a33;
-      font-size: 0.8em;
+      color: #4d0091;
+      line-height: .8em;
+      margin-top: -20px;
     }
 
     .contribution-body {
       color: #4e4e4e;
-      font-style: italic;
       font-size: 1em;
     }
   }

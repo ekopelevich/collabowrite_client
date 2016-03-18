@@ -1,6 +1,10 @@
 <div class="container full-page-container">
   {{outlet}}
   <h1>Recent Stories</h1>
+  {{model.stories.test}}
+  {{#each model.users as |user|}}
+  <p>**** {{user.firstName}}</p>
+  {{/each}}
   <div class="story-list">
     {{#each model.stories as |story| }}
       <div class="story-container">
@@ -8,7 +12,7 @@
           {{#link-to "story.contributions" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
           <div class="story-meta-data">
-            <p class="story-user">Created by: {{model.user.firstName}}</p>
+            <p class="story-user">Created by: {{story.user.firstName}} {{story.user.lastName}}</p>
             <p class="story-genre">Genre: {{story.genreId}}</p>
             <p class="story-start-date">Created on: {{moment-format story.startDate}}</p>
           </div>
