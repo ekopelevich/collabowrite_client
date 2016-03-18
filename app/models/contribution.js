@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  authorId: DS.attr(),
+  userId: DS.attr(),
   storyId: DS.attr(),
   title: DS.attr(),
   body: DS.attr(),

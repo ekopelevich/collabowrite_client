@@ -365,6 +365,9 @@ body {
     .story-title {
       text-align: left;
       font-size: 2em;
+    }
+
+    .story-summary {
       margin-bottom: 50px;
     }
 
@@ -372,7 +375,7 @@ body {
       .story-user, .story-genre, .story-start-date {
         font-size: 1em;
         color: #4d0091;
-        line-height: .6em;
+        line-height: .8em;
         margin-top: -20px;
       }
     }

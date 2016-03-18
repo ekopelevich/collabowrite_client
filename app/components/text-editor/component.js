@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       link: '/tinymce/plugins/link/plugin.min.js',
       table: '/tinymce/plugins/table/plugin.min.js'
     },
-    menubar: true,
+    menubar: false,
     toolbar1: 'bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link table image'
   },
 
