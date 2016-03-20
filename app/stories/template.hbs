@@ -1,10 +1,6 @@
 <div class="container full-page-container">
   {{outlet}}
   <h1>Recent Stories</h1>
-  {{model.stories.test}}
-  {{#each model.users as |user|}}
-  <p>**** {{user.firstName}}</p>
-  {{/each}}
   <div class="story-list">
     {{#each model.stories as |story| }}
       <div class="story-container">
